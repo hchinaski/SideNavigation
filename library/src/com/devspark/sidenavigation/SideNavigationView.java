@@ -194,26 +194,27 @@ public class SideNavigationView extends LinearLayout {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			final ViewHolder holder;
 			if (convertView == null) {
-				convertView = inflater.inflate(R.layout.side_navigation_item, null);
-				holder = new ViewHolder();
-				holder.image = (ImageView) convertView
-						.findViewById(R.id.side_navigation_item_icon);
-				holder.text = (TextView) convertView
-						.findViewById(R.id.side_navigation_item_text);
-				convertView.setTag(holder);
-			} else {
-				holder = (ViewHolder) convertView.getTag();
-			}
-			holder.image.setImageResource(menuItems.get(position).icon);
-			holder.text.setText(menuItems.get(position).text);
-			return convertView;
-		}
+        convertView = inflater.inflate(R.layout.side_navigation_item, null);
+        holder = new ViewHolder();
+        holder.image = (ImageView) convertView.findViewById(R.id.side_navigation_item_icon);
+        holder.text = (TextView) convertView.findViewById(R.id.side_navigation_item_text);
+        convertView.setTag(holder);
+      }
+      else
+      {
+        holder = (ViewHolder) convertView.getTag();
+      }
+      holder.image.setImageResource(menuItems.get(position).icon);
+      holder.text.setText(menuItems.get(position).text);
+      return convertView;
+    }
 
-		class ViewHolder {
-			TextView text;
-			ImageView image;
-		}
+    class ViewHolder
+    {
+      TextView  text;
+      ImageView image;
+    }
 
-	}
+  }
 
 }
