@@ -100,20 +100,16 @@ public class SideNavigationView extends LinearLayout {
 
 	public void showMenu() {
 		outsideView.setVisibility(View.VISIBLE);
-		outsideView.startAnimation(AnimationUtils.loadAnimation(getContext(),
-				R.anim.side_navigation_fade_in));
+		//outsideView.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.side_navigation_fade_in));
 		navigationMenu.setVisibility(View.VISIBLE);
-		navigationMenu.startAnimation(AnimationUtils.loadAnimation(getContext(),
-				R.anim.side_navigation_in_from_left));
+		navigationMenu.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.side_navigation_in_from_left));
 	}
 
 	public void hideMenu() {
 		outsideView.setVisibility(View.GONE);
-		outsideView.startAnimation(AnimationUtils.loadAnimation(getContext(),
-				R.anim.side_navigation_fade_out));
+		//outsideView.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.side_navigation_fade_out));
 		navigationMenu.setVisibility(View.GONE);
-		navigationMenu.startAnimation(AnimationUtils.loadAnimation(getContext(),
-				R.anim.side_navigation_out_to_left));
+		navigationMenu.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.side_navigation_out_to_left));
 	}
 
 	public void toggleMenu() {
